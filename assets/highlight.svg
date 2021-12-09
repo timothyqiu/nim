@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   id="svg322"
+   sodipodi:docname="highlight.svg"
+   width="64"
+   height="64"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview324"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="4.0333333"
+     inkscape:cx="62.603306"
+     inkscape:cy="59.6281"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg322" />
+  <defs
+     id="defs2" />
+  <g
+     id="g1471"
+     transform="translate(-128.00002,-128)">
+    <path
+       stroke="none"
+       fill="#f3f3f3"
+       d="m 154.95,152.65 q -0.75,-0.5 -1.4,-1.15 -2.65,-2.65 -2.65,-6.4 0,-3.75 2.65,-6.4 2.65,-2.7 6.45,-2.7 3.8,0 6.5,2.7 2.7,2.65 2.7,6.4 0,3.75 -2.7,6.4 l -1.15,1 -0.2,0.15 q -5.3,1.4 -10.2,0 m 11.7,2.05 1.85,3.35 q 3.45,7.75 3.5,18.7 v 0.1 q 0,2.95 -3.5,5.05 -3.5,2.1 -8.5,2.1 -5,0 -8.5,-2.1 -3.5,-2.1 -3.5,-5.05 v -0.1 q 0.05,-10.95 3.5,-18.7 0.95,-2.1 2,-3.55 6.35,3.55 13.15,0.2"
+       id="path214" />
+    <path
+       stroke="none"
+       fill="#e7e7e7"
+       d="m 166.65,154.7 q -6.8,3.35 -13.15,-0.2 l 1.45,-1.85 q 4.9,1.4 10.2,0 l -0.1,0.05 1.6,2"
+       id="path216" />
+    <path
+       stroke="none"
+       fill="#b6b6b6"
+       d="m 166.65,154.7 -1.6,-2 0.1,-0.05 0.2,-0.15 1.15,-1 q 2.7,-2.65 2.7,-6.4 0,-3.75 -2.7,-6.4 -2.7,-2.7 -6.5,-2.7 -3.8,0 -6.45,2.7 -2.65,2.65 -2.65,6.4 0,3.75 2.65,6.4 0.65,0.65 1.4,1.15 l -1.45,1.85 q -1.05,1.45 -2,3.55 -3.45,7.75 -3.5,18.7 v 0.1 q 0,2.95 3.5,5.05 3.5,2.1 8.5,2.1 5,0 8.5,-2.1 3.5,-2.1 3.5,-5.05 v -0.1 q -0.05,-10.95 -3.5,-18.7 l -1.85,-3.35 m 4.55,-9.6 q 0,4.6 -3.3,7.85 l 0.45,0.65 h -0.05 l 2.05,3.6 v 0.05 q 3.6,8.05 3.65,19.5 v 0.1 q 0.15,4 -4.45,6.8 -3.95,2.35 -9.55,2.35 -5.6,0 -9.5,-2.35 -4.65,-2.8 -4.5,-6.8 v -0.1 q 0.05,-11.45 3.7,-19.5 1,-2.3 2.15,-3.85 l 0.05,-0.05 0.25,-0.4 q -3.25,-3.25 -3.25,-7.85 0,-4.6 3.25,-7.8 3.2,-3.3 7.85,-3.3 4.65,0 7.95,3.3 h -0.05 q 3.3,3.2 3.3,7.8"
+       id="path218" />
+  </g>
+</svg>

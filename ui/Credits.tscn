@@ -1,0 +1,76 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://resource/default_theme.tres" type="Theme" id=1]
+[ext_resource path="res://ui/URLButton.tscn" type="PackedScene" id=2]
+
+[node name="Credits" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="V" type="VBoxContainer" parent="."]
+margin_left = 24.0
+margin_top = 16.0
+margin_right = 576.0
+margin_bottom = 784.0
+custom_constants/separation = 24
+alignment = 1
+
+[node name="Made" parent="V" instance=ExtResource( 2 )]
+margin_left = 185.0
+margin_top = 262.0
+margin_right = 367.0
+margin_bottom = 282.0
+rect_min_size = Vector2( 182, 20 )
+size_flags_horizontal = 4
+text = "Made by Haoyu Qiu"
+url = "https://timothyqiu.itch.io/"
+
+[node name="Spacer" type="Control" parent="V"]
+margin_top = 306.0
+margin_right = 552.0
+margin_bottom = 330.0
+rect_min_size = Vector2( 0, 24 )
+
+[node name="Font" parent="V" instance=ExtResource( 2 )]
+margin_left = 48.0
+margin_top = 354.0
+margin_right = 503.0
+margin_bottom = 374.0
+rect_min_size = Vector2( 455, 20 )
+size_flags_horizontal = 4
+text = "Font “Junction” by The League of Moveable Type"
+url = "https://www.theleagueofmoveabletype.com/junction"
+
+[node name="Icons" parent="V" instance=ExtResource( 2 )]
+margin_left = 151.0
+margin_top = 398.0
+margin_right = 400.0
+margin_bottom = 418.0
+rect_min_size = Vector2( 249, 20 )
+size_flags_horizontal = 4
+text = "Bottom Icons by Kenney.nl"
+url = "https://kenney.nl/assets/game-icons"
+
+[node name="Audio" parent="V" instance=ExtResource( 2 )]
+margin_left = 116.0
+margin_top = 442.0
+margin_right = 435.0
+margin_bottom = 462.0
+rect_min_size = Vector2( 319, 20 )
+size_flags_horizontal = 4
+text = "Chess Puzzle Blitz SFX by el_boss"
+url = "https://freesound.org/people/el_boss/packs/30764/"
+
+[node name="Audio2" parent="V" instance=ExtResource( 2 )]
+margin_left = 135.0
+margin_top = 486.0
+margin_right = 416.0
+margin_bottom = 506.0
+rect_min_size = Vector2( 281, 20 )
+size_flags_horizontal = 4
+text = "UI Sound Effects by Kenney.nl"
+url = "https://www.kenney.nl/assets?q=audio"

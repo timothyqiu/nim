@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Audio.gd" type="Script" id=1]
+[ext_resource path="res://assets/audio/546119__el-boss__piece-placement.mp3" type="AudioStream" id=2]
+[ext_resource path="res://assets/audio/Blip_select 29.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/jingles_PIZZI15.ogg" type="AudioStream" id=4]
+[ext_resource path="res://assets/audio/rollover4.ogg" type="AudioStream" id=5]
+[ext_resource path="res://assets/audio/546121__el-boss__board-start.mp3" type="AudioStream" id=6]
+
+[sub_resource type="AudioStreamRandomPitch" id=1]
+audio_stream = ExtResource( 2 )
+
+[node name="Audio" type="Node"]
+script = ExtResource( 1 )
+
+[node name="SFX" type="Node" parent="."]
+
+[node name="TakePiece" type="AudioStreamPlayer" parent="SFX"]
+stream = SubResource( 1 )
+volume_db = -8.0
+bus = "Game"
+
+[node name="Button" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource( 3 )
+volume_db = -16.0
+
+[node name="EndTurn" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource( 5 )
+volume_db = -8.0
+
+[node name="Winner" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource( 4 )
+volume_db = -8.0
+
+[node name="GameStart" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource( 6 )
+volume_db = -8.0

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/URLButton.gd" type="Script" id=1]
+[ext_resource path="res://ui/SimpleButton.tscn" type="PackedScene" id=2]
+
+[node name="URLButton" instance=ExtResource( 2 )]
+modulate = Color( 0, 0, 0, 1 )
+margin_right = 103.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 103, 20 )
+mouse_default_cursor_shape = 2
+texture_normal = null
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="." index="1"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "URLButton"
+
+[connection signal="pressed" from="." to="." method="_on_URLButton_pressed"]

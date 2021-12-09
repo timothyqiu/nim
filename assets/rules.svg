@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="40"
+   height="40"
+   viewBox="0 0 40 40"
+   version="1.1"
+   id="SVGRoot"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20, custom)"
+   sodipodi:docname="rules.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#808080"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="true"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     width="1920px"
+     inkscape:showpageshadow="true"
+     inkscape:zoom="7.507117"
+     inkscape:cx="28.572886"
+     inkscape:cy="31.103818"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="图层 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 18.35,14.85 c -0.23333,0.2 -0.51667,0.3 -0.85,0.3 H 11.15 L 10.55,14.95 10.1,14.5 10,13.75 C 10.26667,10.68333 11.35,8.3 13.25,6.6 15.11667,4.86667 17.46667,4 20.3,4 c 2.83333,0 5.15,0.76667 6.95,2.3 1.83333,1.63333 2.75,3.86667 2.75,6.7 0,1.36667 -0.18333,2.36667 -0.55,3 l -0.55,1.05 h 0.05 l -0.9,1.35 -0.05,0.05 -0.8,0.9 v 0.05 l -1.85,1.8 -0.75,0.85 h -0.3 v 0.05 h 0.3 l -0.2,0.25 -0.1,0.85 v 0.6 0.1 l -0.35,0.8 -0.9,0.3 h -6.1 L 16.1,24.7 c -0.23333,-0.23333 -0.36667,-0.5 -0.4,-0.8 v -2.8 h 0.15 c 0.0667,-0.6 0.2,-1.08333 0.4,-1.45 0.3,-0.63333 0.96667,-1.5 2,-2.6 l 2.7,-2.7 0.25,-1.1 -0.35,-1.1 c -0.16667,-0.23333 -0.4,-0.33333 -0.7,-0.3 -0.3,0 -0.56667,0.13333 -0.8,0.4 V 12.2 c -0.3,0.46667 -0.48333,1.08333 -0.55,1.85 l -0.45,0.8 M 20.4,27 c 1.26667,0 2.35,0.41667 3.25,1.25 0.9,0.86667 1.35,1.93333 1.35,3.2 0,1.26667 -0.45,2.35 -1.35,3.25 C 22.75,35.56667 21.66667,36 20.4,36 19.2,36 18.16667,35.56667 17.3,34.7 16.43333,33.83333 16,32.75 16,31.45 16,30.18333 16.43333,29.11667 17.3,28.25 18.16667,27.41667 19.2,27 20.4,27"
+       style="fill:#ffffff;stroke:none"
+       id="path1012" />
+  </g>
+</svg>

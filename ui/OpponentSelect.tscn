@@ -1,0 +1,119 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://ui/OpponentSelect.gd" type="Script" id=1]
+[ext_resource path="res://assets/human.svg" type="Texture" id=2]
+[ext_resource path="res://assets/cpu.svg" type="Texture" id=3]
+[ext_resource path="res://resource/default_theme.tres" type="Theme" id=4]
+[ext_resource path="res://ui/SimpleButton.tscn" type="PackedScene" id=5]
+
+[node name="OpponentSelect" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 4 )
+custom_constants/separation = 32
+alignment = 1
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CPU" parent="." instance=ExtResource( 5 )]
+margin_left = 159.0
+margin_top = 256.0
+margin_right = 441.0
+margin_bottom = 384.0
+rect_min_size = Vector2( 282, 0 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 2 )
+flip_h = true
+sound = "GameStart"
+use_alt_pressed_color = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CPU"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="CPU/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 0 )
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="CPU/HBoxContainer"]
+margin_left = 128.0
+margin_right = 154.0
+margin_bottom = 128.0
+mouse_filter = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "VS"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CPU/HBoxContainer"]
+margin_left = 154.0
+margin_right = 282.0
+margin_bottom = 128.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Human" parent="." instance=ExtResource( 5 )]
+margin_left = 159.0
+margin_top = 416.0
+margin_right = 441.0
+margin_bottom = 544.0
+rect_min_size = Vector2( 282, 0 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 2 )
+flip_h = true
+sound = "GameStart"
+use_alt_pressed_color = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Human"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="Human/HBoxContainer"]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 0 )
+mouse_filter = 1
+
+[node name="Label" type="Label" parent="Human/HBoxContainer"]
+margin_left = 128.0
+margin_right = 154.0
+margin_bottom = 128.0
+mouse_filter = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "VS"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Human/HBoxContainer"]
+margin_left = 154.0
+margin_right = 282.0
+margin_bottom = 128.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="CPU" to="." method="_on_CPU_pressed"]
+[connection signal="pressed" from="Human" to="." method="_on_Human_pressed"]

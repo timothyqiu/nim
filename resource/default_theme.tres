@@ -1,0 +1,39 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://resource/default_font.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 24.0
+content_margin_right = 24.0
+content_margin_top = 16.0
+content_margin_bottom = 16.0
+bg_color = Color( 0.901961, 0.866667, 0.768627, 1 )
+
+[resource]
+default_font = ExtResource( 1 )
+Button/colors/font_color = Color( 0.403922, 0.537255, 0.513726, 1 )
+Button/colors/font_color_disabled = Color( 0.901961, 0.866667, 0.768627, 1 )
+Button/colors/font_color_focus = Color( 0.403922, 0.537255, 0.513726, 1 )
+Button/colors/font_color_hover = Color( 0.0941176, 0.113725, 0.192157, 1 )
+Button/colors/font_color_pressed = Color( 0.941176, 0.913725, 0.823529, 1 )
+Button/styles/disabled = SubResource( 2 )
+Button/styles/focus = SubResource( 2 )
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 2 )
+Game/colors/background = Color( 0.941176, 0.913725, 0.823529, 1 )
+Game/colors/grid = Color( 0.901961, 0.866667, 0.768627, 1 )
+Game/colors/info_disabled = Color( 0.901961, 0.866667, 0.768627, 1 )
+Game/colors/info_normal = Color( 0.0941176, 0.113725, 0.192157, 1 )
+Game/colors/interactable = Color( 0.403922, 0.537255, 0.513726, 1 )
+Label/colors/font_color = Color( 0.0941176, 0.113725, 0.192157, 1 )
+LinkButton/colors/font_color = Color( 0.0941176, 0.113725, 0.192157, 1 )
+LinkButton/colors/font_color_focus = Color( 0.403922, 0.537255, 0.513726, 1 )
+LinkButton/colors/font_color_hover = Color( 0.403922, 0.537255, 0.513726, 1 )
+LinkButton/colors/font_color_pressed = Color( 0.941176, 0.913725, 0.823529, 1 )
+LinkButton/styles/focus = SubResource( 4 )
+PanelContainer/styles/panel = SubResource( 3 )

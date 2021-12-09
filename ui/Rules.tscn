@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://resource/default_theme.tres" type="Theme" id=1]
+
+[node name="Rules" type="PanelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( -465, -54 )
+theme = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 24.0
+margin_top = 262.0
+margin_right = 576.0
+margin_bottom = 538.0
+custom_constants/line_spacing = 12
+text = "“Nim” is a mathematical game of strategy.
+
+Players take turns to remove pieces from the board.
+
+On each turn, a player must remove at least one piece, and may remove any number of pieces provided they all come from the same row.
+
+The player who removes the last piece wins."
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

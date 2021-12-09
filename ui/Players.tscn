@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/human.svg" type="Texture" id=1]
+[ext_resource path="res://assets/done.svg" type="Texture" id=4]
+[ext_resource path="res://ui/Players.gd" type="Script" id=5]
+[ext_resource path="res://resource/default_theme.tres" type="Theme" id=6]
+[ext_resource path="res://ui/SimpleButton.tscn" type="PackedScene" id=7]
+
+[node name="Players" type="HBoxContainer"]
+margin_right = 600.0
+margin_bottom = 800.0
+theme = ExtResource( 6 )
+alignment = 1
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LeftAvatar" type="TextureRect" parent="."]
+modulate = Color( 0.901961, 0.866667, 0.768627, 1 )
+margin_left = 136.0
+margin_top = 336.0
+margin_right = 264.0
+margin_bottom = 464.0
+size_flags_vertical = 4
+texture = ExtResource( 1 )
+flip_h = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndTurn" parent="." instance=ExtResource( 7 )]
+margin_left = 268.0
+margin_top = 368.0
+margin_right = 332.0
+margin_bottom = 432.0
+size_flags_vertical = 4
+texture_normal = ExtResource( 4 )
+sound = ""
+use_alt_pressed_color = true
+
+[node name="RightAvatar" type="TextureRect" parent="."]
+modulate = Color( 0.901961, 0.866667, 0.768627, 1 )
+margin_left = 336.0
+margin_top = 336.0
+margin_right = 464.0
+margin_bottom = 464.0
+size_flags_vertical = 4
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[connection signal="pressed" from="EndTurn" to="." method="_on_EndTurn_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/546119__el-boss__piece-placement.mp3-f011c45a15e677a8d292ff0ebe49d612.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/546119__el-boss__piece-placement.mp3"
+dest_files=[ "res://.import/546119__el-boss__piece-placement.mp3-f011c45a15e677a8d292ff0ebe49d612.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
