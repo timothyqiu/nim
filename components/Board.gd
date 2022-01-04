@@ -9,14 +9,16 @@ signal turn_ended
 signal turn_started(turn)
 
 enum Turn { PLAYER_A, PLAYER_B }
+enum Mode { MODE_4, MODE_10, MODE_RANDOM }
 
 export var piece_scene: PackedScene
 export var grid_size := Vector2(51, 51) setget set_grid_size
-export var board_size := 10 setget set_board_size
+export var board_size := Vector2(10, 10) setget set_board_size
 export var is_player_a_ai := false
 export var is_player_b_ai := false
 
 var board: Array
+var mode: int = Mode.MODE_10
 var turn: int setget set_turn
 var row_determined: bool
 var rng := RandomNumberGenerator.new()
@@ -31,8 +33,8 @@ func _ready():
 func _draw():
 	# draw checker board
 	var color := get_color("grid", "Game")
-	for y in board_size:
-		for x in board_size:
+	for y in board_size.y:
+		for x in board_size.x:
 			if x % 2 != y % 2:
 				continue
 			draw_rect(Rect2(grid_size * Vector2(x, y), grid_size), color)
@@ -43,7 +45,7 @@ func set_grid_size(value: Vector2) -> void:
 	_update_board()
 
 
-func set_board_size(value: int) -> void:
+func set_board_size(value: Vector2) -> void:
 	board_size = value
 	_update_board()
 
@@ -111,11 +113,32 @@ func start_game() -> void:
 		for piece in row:
 			piece.queue_free()
 	
-	board.resize(board_size)
-	for row in board_size:
+	var size := PoolIntArray([])
+	var cols := 0
+	match mode:
+		Mode.MODE_4:
+			size.resize(4)
+			for i in size.size():
+				size[i] = 1 + i * 2
+			cols = size.size() * 2 - 1
+		Mode.MODE_10:
+			size.resize(10)
+			for i in size.size():
+				size[i] = 1 + i
+			cols = size.size()
+		Mode.MODE_RANDOM:
+			size.resize(3 + randi() % 8)
+			for i in size.size():
+				size[i] = 1 + randi() % (1 + i)
+				if size[i] > cols:
+					cols = size[i]
+	
+	self.board_size = Vector2(cols, size.size())
+	board.resize(size.size())
+	for row in size.size():
 		board[row] = []
 		
-		for col in row + 1:
+		for col in size[row]:
 			var piece := piece_scene.instance() as Piece
 			piece.mouse_filter = MOUSE_FILTER_IGNORE
 			piece.rect_position = Vector2(col, row) * grid_size
@@ -127,7 +150,8 @@ func start_game() -> void:
 	
 	yield(tween, "tween_all_completed")
 	
-	print("[Game Start] Seed: ", rng.seed)
+	if OS.has_feature("debug"):
+		print("[Game Start] Seed: ", rng.seed)
 	emit_signal("game_start")
 	
 	set_turn(Turn.PLAYER_A if rng.randi() % 2 == 0 else Turn.PLAYER_B)
@@ -156,7 +180,8 @@ func set_turn(value: int) -> void:
 	row_determined = false
 	
 	Audio.play_sfx("EndTurn")
-	print("Turn Started: ", turn)
+	if OS.has_feature("debug"):
+		print("Turn Started: ", turn)
 	emit_signal("turn_started", turn)
 	
 	if is_ai:
@@ -172,7 +197,8 @@ func end_turn() -> void:
 
 
 func take_piece(piece: Piece, row: int) -> void:
-	print("[%s] Take from row %d: %d left" % [turn, row, board[row].size() - 1])
+	if OS.has_feature("debug"):
+		print("[%s] Take from row %d: %d left" % [turn, row, board[row].size() - 1])
 	
 	board[row].erase(piece)
 	

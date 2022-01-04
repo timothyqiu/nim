@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://components/Board.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Game.gd" type="Script" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://ui/LayeredContainer.tscn" type="PackedScene" id=11]
 [ext_resource path="res://resource/title_font.tres" type="DynamicFont" id=12]
 [ext_resource path="res://assets/audio_on.svg" type="Texture" id=13]
+[ext_resource path="res://ui/ModeSelect.tscn" type="PackedScene" id=14]
 
 [node name="Game" type="VBoxContainer"]
 anchor_right = 1.0
@@ -88,6 +89,12 @@ anchor_bottom = 0.0
 margin_right = 510.0
 margin_bottom = 510.0
 
+[node name="ModeSelect" parent="Content/Main" instance=ExtResource( 14 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 510.0
+margin_bottom = 510.0
+
 [node name="Rules" parent="Content/Main" instance=ExtResource( 8 )]
 visible = false
 anchor_right = 0.0
@@ -140,6 +147,7 @@ texture_normal = ExtResource( 5 )
 [connection signal="turn_ended" from="Content/Main/Board" to="." method="_on_Board_turn_ended"]
 [connection signal="turn_started" from="Content/Main/Board" to="." method="_on_Board_turn_started"]
 [connection signal="opponent_selected" from="Content/Main/OpponentSelect" to="." method="_on_OpponentSelect_opponent_selected"]
+[connection signal="mode_selected" from="Content/Main/ModeSelect" to="." method="_on_ModeSelect_mode_selected"]
 [connection signal="pressed" from="Controls/Buttons/Rules" to="." method="_on_Rules_pressed"]
 [connection signal="pressed" from="Controls/Buttons/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="Controls/Buttons/Mute" to="." method="_on_Mute_pressed"]

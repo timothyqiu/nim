@@ -17,6 +17,8 @@ __meta__ = {
 
 [node name="Tween" type="Tween" parent="."]
 
+[node name="BlinkTween" type="Tween" parent="."]
+
 [connection signal="button_down" from="." to="." method="_on_SimpleButton_button_down"]
 [connection signal="button_up" from="." to="." method="_on_SimpleButton_button_up"]
 [connection signal="mouse_entered" from="." to="." method="_on_SimpleButton_mouse_entered"]

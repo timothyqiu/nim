@@ -37,6 +37,7 @@ margin_bottom = 432.0
 size_flags_vertical = 4
 texture_normal = ExtResource( 4 )
 sound = ""
+blink = true
 use_alt_pressed_color = true
 
 [node name="RightAvatar" type="TextureRect" parent="."]

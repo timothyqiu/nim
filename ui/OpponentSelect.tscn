@@ -28,7 +28,6 @@ rect_min_size = Vector2( 282, 0 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 2 )
 flip_h = true
-sound = "GameStart"
 use_alt_pressed_color = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CPU"]
@@ -76,7 +75,6 @@ rect_min_size = Vector2( 282, 0 )
 size_flags_horizontal = 4
 texture_normal = ExtResource( 2 )
 flip_h = true
-sound = "GameStart"
 use_alt_pressed_color = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Human"]

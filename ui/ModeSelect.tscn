@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/size_random.svg" type="Texture" id=1]
+[ext_resource path="res://assets/size_10.svg" type="Texture" id=2]
+[ext_resource path="res://assets/size_4.svg" type="Texture" id=3]
+[ext_resource path="res://resource/default_theme.tres" type="Theme" id=4]
+[ext_resource path="res://ui/SimpleButton.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/ModeSelect.gd" type="Script" id=6]
+
+[node name="ModeSelect" type="HBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource( 4 )
+custom_constants/separation = 16
+alignment = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5" parent="." instance=ExtResource( 5 )]
+margin_left = 92.0
+margin_top = 336.0
+margin_right = 220.0
+margin_bottom = 464.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 3 )
+sound = "GameStart"
+use_alt_pressed_color = true
+
+[node name="10" parent="." instance=ExtResource( 5 )]
+margin_left = 236.0
+margin_top = 336.0
+margin_right = 364.0
+margin_bottom = 464.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 2 )
+sound = "GameStart"
+use_alt_pressed_color = true
+
+[node name="Random" parent="." instance=ExtResource( 5 )]
+margin_left = 380.0
+margin_top = 336.0
+margin_right = 508.0
+margin_bottom = 464.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource( 1 )
+sound = "GameStart"
+use_alt_pressed_color = true
+
+[connection signal="pressed" from="5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="10" to="." method="_on_10_pressed"]
+[connection signal="pressed" from="Random" to="." method="_on_Random_pressed"]

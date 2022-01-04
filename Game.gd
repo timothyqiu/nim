@@ -6,6 +6,7 @@ onready var title := $Content/Header/Title as Label
 onready var main := $Content/Main as LayeredContainer
 onready var board := $Content/Main/Board as Board
 onready var opponent_select := $Content/Main/OpponentSelect
+onready var mode_select := $Content/Main/ModeSelect
 onready var rules := $Content/Main/Rules as Control
 onready var credits := $Content/Main/Credits as Control
 onready var winner_label := $Content/Main/Winner as Label
@@ -23,6 +24,7 @@ func _ready():
 	
 	yield(get_tree().create_timer(0.5), "timeout")
 	main.set_child_visible(opponent_select, true)
+	main.set_child_visible(mode_select, false)
 
 
 func start_game():
@@ -80,14 +82,20 @@ func _on_Restart_pressed():
 
 func _on_OpponentSelect_opponent_selected(type):
 	main.set_child_visible(opponent_select, false)
-	header.set_child_visible(players, true)
+	main.set_child_visible(mode_select, true)
 	players.right_type = type
 	players.state = Players.State.INACTIVE
 	board.is_player_b_ai = type == Players.PlayerType.CPU
-	start_game()
+	
 
 
 func _on_Mute_pressed():
 	AudioServer.set_bus_mute(0, not AudioServer.is_bus_mute(0))
 	_update_mute_button()
 
+
+func _on_ModeSelect_mode_selected(mode):
+	main.set_child_visible(mode_select, false)
+	header.set_child_visible(players, true)
+	board.mode = mode
+	start_game()
