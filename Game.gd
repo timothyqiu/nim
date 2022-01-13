@@ -12,6 +12,8 @@ onready var credits := $Content/Main/Credits as Control
 onready var winner_label := $Content/Main/Winner as Label
 onready var mute_button := $Controls/Buttons/Mute as SimpleButton
 
+var in_title_screen: bool = true
+
 
 func _ready():
 	_update_mute_button()
@@ -70,17 +72,26 @@ func _on_Players_end_turn():
 
 func _on_Credits_pressed():
 	main.toggle_child_visible(credits)
+	if credits.visible:
+		in_title_screen = false
 
 
 func _on_Rules_pressed():
 	main.toggle_child_visible(rules)
+	if rules.visible:
+		in_title_screen = false
 
 
 func _on_Restart_pressed():
-	Globals.animate_reload_scene()
+	if in_title_screen:
+		get_tree().quit()
+	else:
+		Globals.animate_reload_scene()
+		in_title_screen = true
 
 
 func _on_OpponentSelect_opponent_selected(type):
+	in_title_screen = false
 	main.set_child_visible(opponent_select, false)
 	main.set_child_visible(mode_select, true)
 	players.right_type = type

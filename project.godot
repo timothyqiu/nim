@@ -47,6 +47,9 @@ _global_script_class_icons={
 config/name="Nim"
 config/description="A mathematical game of strategy."
 run/main_scene="res://Game.tscn"
+boot_splash/image="res://logo.png"
+boot_splash/fullsize=false
+boot_splash/bg_color=Color( 1, 1, 1, 1 )
 config/icon="res://assets/icon.png"
 
 [audio]
