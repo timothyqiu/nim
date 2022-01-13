@@ -12,3 +12,6 @@ data_*/
 
 # Build
 build/
+
+*.apk
+*.aab
