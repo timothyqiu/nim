@@ -13,9 +13,9 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="."]
 margin_left = 24.0
-margin_top = 262.0
-margin_right = 576.0
-margin_bottom = 538.0
+margin_top = 422.0
+margin_right = 606.0
+margin_bottom = 698.0
 custom_constants/line_spacing = 12
 text = "“Nim” is a mathematical game of strategy.
 

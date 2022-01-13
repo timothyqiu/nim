@@ -72,10 +72,14 @@ func _on_Players_end_turn():
 
 func _on_Credits_pressed():
 	main.toggle_child_visible(credits)
+	if credits.visible:
+		in_title_screen = false
 
 
 func _on_Rules_pressed():
 	main.toggle_child_visible(rules)
+	if rules.visible:
+		in_title_screen = false
 
 
 func _on_Restart_pressed():
